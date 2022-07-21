@@ -15,11 +15,7 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
-        name: Create .env
-      - run: |
-          touch .env
-          echo VITE_GITHUB_API_TOKEN=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 >> .env
-          
+      
       - name: Git config
         run: |
           git config --global user.email "actions@github.com"
@@ -29,6 +25,7 @@ jobs:
       - name: Deploy to repository
         run: |
           set -e
+          npm i
           npm run build
 
           cd dist
@@ -38,6 +35,6 @@ jobs:
           git add -A
           git commit -m 'deploy'
 
-          git push -f git@github.com:JoaoHamerski/github-api.git main:gh-pages
+          git push -f https://${{ secrets.ACCESS_TOKEN }}@github.com/JoaoHamerski/github-api.git main:gh-pages
             
           
