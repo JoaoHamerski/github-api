@@ -79,6 +79,11 @@ const formatDatetime = (datetime) => DateTime
             </b>
             <span>{{ formatDatetime(repository.createdAt) }}</span>
           </small>
+          &bull;
+          <small class="text-secondary">
+            <b>Último commit: </b>
+            <span>{{ formatDatetime(repository.pushedAt) }}</span>
+          </small>
         </div>
         <div class="ms-auto">
           <span

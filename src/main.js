@@ -3,7 +3,6 @@ import { DefaultApolloClient } from '@vue/apollo-composable'
 import apolloClient from "./vue-apollo"
 import App from "./App.vue";
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-import './libs.js'
 import '@/sass/app.scss'
 
 // Create app configs

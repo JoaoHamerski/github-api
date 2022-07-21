@@ -30,7 +30,7 @@ const onSearch = search => {
       Opções
     </template>
 
-    <div class="row">
+    <div class="row flex-column flex-sm-row">
       <div class="col">
         <OptionsSearchRepository @search="onSearch" />
         <OptionsOrderBy
@@ -39,7 +39,7 @@ const onSearch = search => {
         />
       </div>
 
-      <div class="col">
+      <div class="col mt-3 mt-sm-0">
         <OptionsFilters @filter="onFilter" />
       </div>
     </div>

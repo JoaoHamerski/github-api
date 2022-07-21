@@ -6,7 +6,6 @@ query GetOwnerInfo (
 ) {
   repositoryOwner (login: $login) {
     id
-    avatarUrl
     login
 
     repositories (
@@ -23,6 +22,7 @@ query GetOwnerInfo (
         stargazerCount
         isArchived
         isEmpty
+        pushedAt
       }
     }
   }

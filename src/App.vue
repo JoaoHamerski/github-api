@@ -168,7 +168,7 @@ const onSearch = (searchedValue) => {
 
 <template>
   <div class="container my-3">
-    <div class="d-flex justify-content-between align-items-baseline">
+    <div class="d-flex flex-column flex-sm-row justify-content-between align-items-baseline">
       <HeaderTitle />
       <UsernameInput @search="onUserSearch" />
     </div>
