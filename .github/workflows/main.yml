@@ -29,6 +29,7 @@ jobs:
       - name: Deploy to repository
         run: |
           set -e
+          npm i
           npm run build
 
           cd dist
