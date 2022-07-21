@@ -39,6 +39,6 @@ jobs:
           git add -A
           git commit -m 'deploy'
 
-          git push -f git@github.com:JoaoHamerski/github-api.git main:gh-pages
+          git push -f https://${{ secrets.ACCESS_TOKEN }}@github.com/JoaoHamerski/github-api.git main:gh-pages
             
           
