@@ -1,0 +1,29 @@
+query GetOwnerInfo (
+  $login: String!
+  $first: Int!
+  $privacy: RepositoryPrivacy
+  $orderBy: RepositoryOrder
+) {
+  repositoryOwner (login: $login) {
+    id
+    avatarUrl
+    login
+
+    repositories (
+      first: $first
+      privacy: $privacy
+      orderBy: $orderBy
+    ) {
+      nodes {
+        id
+        name
+        url
+        description
+        createdAt
+        stargazerCount
+        isArchived
+        isEmpty
+      }
+    }
+  }
+}
