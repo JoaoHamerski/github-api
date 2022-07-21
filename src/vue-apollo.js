@@ -1,10 +1,13 @@
 import { ApolloClient, createHttpLink, InMemoryCache } from '@apollo/client/core'
 
 // HTTP connection to the API
+const token = atob(import.meta.env.VITE_GITHUB_API_TOKEN)
+console.log(token)
+
 const httpLink = createHttpLink({
   uri: 'https://api.github.com/graphql',
   headers: {
-    authorization: `Bearer ${atob(import.meta.env.VITE_GITHUB_API_TOKEN, 'base64')}`
+    authorization: `Bearer ${token}`
   }
 })
 
