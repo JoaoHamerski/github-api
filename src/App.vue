@@ -22,9 +22,16 @@ const query = reactive({
 
 const filters = reactive({})
 const search = ref('')
+const appError = ref(false)
 
 // APOLLO CALL
-const { result, loading } = useQuery(GetOwnerInfo, query)
+const { result, loading, onError } = useQuery(GetOwnerInfo, query)
+
+onError(function (error) {
+  if (error.networkError.statusCode === 401) {
+    appError.value = true
+  }
+})
 
 // PROPRIEDADES COMPUTADAS
 const login = computed(() => result?.value?.repositoryOwner?.login)
@@ -174,7 +181,16 @@ const onSearch = (searchedValue) => {
       @search="onSearch"
     />
 
+    <div
+      v-if="appError"
+      class="mt-5 pt-5 text-center"
+    >
+      <h4 class="text-danger fw-bold">OPS!</h4>
+      <h5 class="mt-4 text-secondary">Ocorreu um erro ao se comunicar com a API, por favor, tente novamente mais tarde.
+      </h5>
+    </div>
     <Component
+      v-else
       :is="getComponent.component"
       v-bind="getComponent.attrs"
       v-on="getComponent.on"
