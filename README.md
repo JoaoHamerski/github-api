@@ -1,6 +1,14 @@
 # github-api
 
-This template should help get you started developing with Vue 3 in Vite.
+## Tecnologias utilizadas
+- Vue 3 (composition API)
+- Vite (setup da aplicação)
+- API GraphQL do GitHub
+- Vue Apollo v4
+- Bootstrap
+- Eslint
+
+Aplicação pode ser visualizada em: https://joaohamerski.github.io/github-api/
 
 ## Recommended IDE Setup
 
