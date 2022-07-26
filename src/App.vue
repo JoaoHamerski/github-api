@@ -28,7 +28,7 @@ const appError = ref(false)
 const { result, loading, onError } = useQuery(GetOwnerInfo, query)
 
 onError(function (error) {
-  if (error.networkError.statusCode === 401) {
+  if (error.networkError.statusCode.includes([401, 403, 500])) {
     appError.value = true
   }
 })
