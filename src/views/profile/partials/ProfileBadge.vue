@@ -10,7 +10,12 @@ defineProps<ProfileBadgeProps>()
 
 <template>
   <div>
-    <FWIcon v-if="icon" :icon="icon" fixed-width class="mr-2" />
+    <FWIcon
+      v-if="icon"
+      :icon="icon"
+      fixed-width
+      class="mr-2"
+    />
     <span>
       <span>{{ label }}&nbsp;</span>
       <b>{{ text }}</b>

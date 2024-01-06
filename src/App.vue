@@ -64,8 +64,17 @@ provide('isSearchLoading', isLoading)
       leave-active-class="animate__animated animate__fadeOut animate__faster"
       mode="out-in"
     >
-      <TheHome v-if="!hasUser" key="the-home" @search="onSearch" />
-      <TheProfile v-else key="the-profile" :user="user" @back="onBackClick" />
+      <TheHome
+        v-if="!hasUser"
+        key="the-home"
+        @search="onSearch"
+      />
+      <TheProfile
+        v-else
+        key="the-profile"
+        :user="user"
+        @back="onBackClick"
+      />
     </Transition>
   </AppContainer>
 </template>

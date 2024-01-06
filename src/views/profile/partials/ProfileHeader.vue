@@ -18,7 +18,11 @@ defineProps<ProfileHeaderProps>()
       <div
         class="relative w-32 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2"
       >
-        <a :href="user.html_url" target="_blank" class="absolute inset-0" />
+        <a
+          :href="user.html_url"
+          target="_blank"
+          class="absolute inset-0"
+        />
         <img :src="user.avatar_url" />
       </div>
     </div>
@@ -27,7 +31,10 @@ defineProps<ProfileHeaderProps>()
         <h3
           class="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary mb-0"
         >
-          <a :href="user.html_url" target="_blank">
+          <a
+            :href="user.html_url"
+            target="_blank"
+          >
             {{ user.name || user.login }}
           </a>
         </h3>

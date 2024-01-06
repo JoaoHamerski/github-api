@@ -95,9 +95,15 @@ onMounted(async () => {
 
 <template>
   <div>
-    <ProfileBack class="mb-4" @back="onBackClick" />
+    <ProfileBack
+      class="mb-4"
+      @back="onBackClick"
+    />
 
-    <ProfileHeader :user="user" class="mb-10" />
+    <ProfileHeader
+      :user="user"
+      class="mb-10"
+    />
 
     <ProfileContainer class="mb-4">
       <ProfileOptions
@@ -112,7 +118,11 @@ onMounted(async () => {
       leave-active-class="animate_animated animate__fadeOut"
       mode="out-in"
     >
-      <AppLoading v-if="isLoading" key="loading" class="py-14" />
+      <AppLoading
+        v-if="isLoading"
+        key="loading"
+        class="py-14"
+      />
       <ProfileRepos
         v-else
         key="profile-repos"
