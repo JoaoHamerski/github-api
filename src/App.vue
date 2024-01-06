@@ -14,22 +14,23 @@ const isLoading = ref<boolean>(false)
 const user = ref<User>({})
 const toast = useToastStore()
 
-const hasUser = computed<boolean>(() => !isEmpty(user.value)) 
+const hasUser = computed<boolean>(() => !isEmpty(user.value))
 
 const onSearch = async (username: string) => {
   isLoading.value = true
 
   try {
-    user.value =  await fetchAPI(`users/${username}`)
+    user.value = await fetchAPI(`users/${username}`)
 
     updateUrlParams({ username })
   } catch (error) {
     if (error instanceof Response) {
-      const errorMessage = error.status === 404 
-        ? 'Usuário não encontrado'
-        : 'Ops! Algo deu errado.'
+      const errorMessage =
+        error.status === 404
+          ? 'Usuário não encontrado'
+          : 'Ops! Algo deu errado.'
 
-        toast.error(errorMessage)
+      toast.error(errorMessage)
     }
 
     if (!(error instanceof Response)) {
@@ -57,26 +58,14 @@ provide('isSearchLoading', isLoading)
 
 <template>
   <ToastComponent />
-  <AppContainer
-    class="p-10 mx-auto mt-10 w-3/4 overflow-auto h-[90vh]"
-  >
+  <AppContainer class="p-10 mx-auto mt-10 w-3/4 overflow-auto h-[90vh]">
     <Transition
       enter-active-class="animate__animated animate__fadeIn animate__faster"
       leave-active-class="animate__animated animate__fadeOut animate__faster"
       mode="out-in"
     >
-      <TheHome 
-        v-if="!hasUser"
-        key="the-home"
-        @search="onSearch"
-      />
-      <TheProfile
-        v-else
-        key="the-profile"
-        :user="user"
-        @back="onBackClick"
-      />
+      <TheHome v-if="!hasUser" key="the-home" @search="onSearch" />
+      <TheProfile v-else key="the-profile" :user="user" @back="onBackClick" />
     </Transition>
   </AppContainer>
 </template>
-

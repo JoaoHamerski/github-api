@@ -7,7 +7,7 @@ import { autoAnimatePlugin } from '@formkit/auto-animate/vue'
 
 export const initResources = (app: App<Element>) => {
   const pinia = createPinia()
-  
+
   registerGlobalComponents(app)
   registerFontAwesomePlugin(app)
 

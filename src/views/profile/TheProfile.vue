@@ -1,5 +1,11 @@
 <script setup lang="ts">
-import type { User, Repository, ReposOptions, ReposOption, RepoParams } from '@/types/profile'
+import type {
+  User,
+  Repository,
+  ReposOptions,
+  ReposOption,
+  RepoParams,
+} from '@/types/profile'
 import { onMounted, ref } from 'vue'
 import fetchAPI from '@/utils/fetch-api'
 import { useToastStore } from '@/store/toast-store'
@@ -26,20 +32,20 @@ const isLoading = ref<boolean>(false)
 const reposOptions = ref<ReposOptions>({
   sort: 'full_name',
   hideArchived: false,
-  hideForks: false
+  hideForks: false,
 })
 
-const onBackClick = () => { 
+const onBackClick = () => {
   emit('back')
 }
 
 const applyFilters = () => {
   repos.value = reposCache.value
-  
+
   if (reposOptions.value.hideArchived) {
     repos.value = repos.value.filter((repo) => !repo.archived)
   }
-  
+
   if (reposOptions.value.hideForks) {
     repos.value = repos.value.filter((repo) => !repo.fork)
   }
@@ -60,17 +66,17 @@ const onOptionsUpdate = async ({ option, value }: ReposOption) => {
 const fetchData = async (params: RepoParams = {}) => {
   const DEFAULT_PARAMS: RepoParams = {
     sort: 'full_name',
-    per_page: 100
+    per_page: 100,
   }
-  
+
   isLoading.value = true
 
   try {
     reposCache.value = repos.value = await fetchAPI(props.user.repos_url, {
       headers: {
-        'Accept': 'application/vnd.github+json'
+        Accept: 'application/vnd.github+json',
       },
-      params: { ...DEFAULT_PARAMS, ...params }
+      params: { ...DEFAULT_PARAMS, ...params },
     })
   } catch (error) {
     if (error instanceof Error) {
@@ -89,15 +95,9 @@ onMounted(async () => {
 
 <template>
   <div>
-    <ProfileBack
-      class="mb-4"
-      @back="onBackClick"
-    />
-    
-    <ProfileHeader
-      :user="user"
-      class="mb-10"
-    />
+    <ProfileBack class="mb-4" @back="onBackClick" />
+
+    <ProfileHeader :user="user" class="mb-10" />
 
     <ProfileContainer class="mb-4">
       <ProfileOptions
@@ -107,16 +107,12 @@ onMounted(async () => {
       />
     </ProfileContainer>
 
-    <Transition 
+    <Transition
       enter-active-class="animate__animated animate__fadeIn"
       leave-active-class="animate_animated animate__fadeOut"
       mode="out-in"
     >
-      <AppLoading
-        v-if="isLoading"
-        key="loading"
-        class="py-14"
-      />
+      <AppLoading v-if="isLoading" key="loading" class="py-14" />
       <ProfileRepos
         v-else
         key="profile-repos"
@@ -127,4 +123,3 @@ onMounted(async () => {
     </Transition>
   </div>
 </template>
-

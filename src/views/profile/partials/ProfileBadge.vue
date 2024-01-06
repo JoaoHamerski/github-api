@@ -1,8 +1,7 @@
 <script setup lang="ts">
-
 interface ProfileBadgeProps {
-  icon?: string,
-  label: string,
+  icon?: string
+  label: string
   text: string
 }
 
@@ -11,12 +10,7 @@ defineProps<ProfileBadgeProps>()
 
 <template>
   <div>
-    <FWIcon
-      v-if="icon"
-      :icon="icon"
-      fixed-width
-      class="mr-2"
-    /> 
+    <FWIcon v-if="icon" :icon="icon" fixed-width class="mr-2" />
     <span>
       <span>{{ label }}&nbsp;</span>
       <b>{{ text }}</b>

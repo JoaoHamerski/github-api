@@ -1,4 +1,4 @@
-<script setup lang="ts"> 
+<script setup lang="ts">
 import type { Repository } from '@/types/profile'
 import { formatNumber } from '@/formatters/format-number'
 import { formatDateTime } from '@/formatters/format-datetime'
@@ -14,14 +14,14 @@ const props = defineProps<ProfileReposListItemProps>()
 
 const dropdownItems = computed<DropdownItem[]>(() => [
   {
-    label: 'Copiar SSH', 
-    icon: 'far fa-copy', 
-    onClick: () => copyToClipboard(props.repo.ssh_url, 'SSH copiado')
+    label: 'Copiar SSH',
+    icon: 'far fa-copy',
+    onClick: () => copyToClipboard(props.repo.ssh_url, 'SSH copiado'),
   },
   {
-    label: 'Copiar HTTP URL', 
-    icon: 'far fa-copy', 
-    onClick: () => copyToClipboard(props.repo.clone_url, 'URL copiado')
+    label: 'Copiar HTTP URL',
+    icon: 'far fa-copy',
+    onClick: () => copyToClipboard(props.repo.clone_url, 'URL copiado'),
   },
 ])
 </script>
@@ -30,11 +30,7 @@ const dropdownItems = computed<DropdownItem[]>(() => [
   <li>
     <div class="flex justify-between mb-3">
       <div>
-        <a
-          :href="repo.html_url"
-          class="mr-3"
-          target="_blank"
-        >
+        <a :href="repo.html_url" class="mr-3" target="_blank">
           <FWIcon
             class="text-blue-600 hover:text-blue-500 cursor-pointer transition-colors"
             icon="fa-solid fa-up-right-from-square"
@@ -51,10 +47,7 @@ const dropdownItems = computed<DropdownItem[]>(() => [
         </span>
       </div>
       <div>
-        <AppDropdown
-          icon="fa-ellipsis"
-          :items="dropdownItems"
-        />
+        <AppDropdown icon="fa-ellipsis" :items="dropdownItems" />
       </div>
     </div>
 
@@ -81,7 +74,7 @@ const dropdownItems = computed<DropdownItem[]>(() => [
           class="badge-warning"
           label="Arquivado"
         />
-          
+
         <AppBadge
           v-if="repo.language"
           class="badge-outline badge-info"
@@ -89,11 +82,10 @@ const dropdownItems = computed<DropdownItem[]>(() => [
         />
         <AppBadge
           class="badge-outline badge-warning"
-          :label="formatNumber(repo.stargazers_count, {notation: 'compact'})"
+          :label="formatNumber(repo.stargazers_count, { notation: 'compact' })"
           icon="fa-regular fa-star"
         />
       </div>
     </div>
   </li>
 </template>
-

@@ -12,8 +12,6 @@ const onSearch = (search: string) => {
 <template>
   <div class="mx-auto mt-10">
     <HomeHeader />
-    <HomeSearch
-      @search="onSearch"
-    />
+    <HomeSearch @search="onSearch" />
   </div>
 </template>

@@ -1,7 +1,7 @@
-import type { App } from "vue"
+import type { App } from 'vue'
 
 const components = import.meta.glob('./**/App*.vue', {
-  eager: true
+  eager: true,
 })
 
 const registerGlobalComponents = (app: App<Element>) => {
@@ -11,7 +11,7 @@ const registerGlobalComponents = (app: App<Element>) => {
       .pop()!
       .replace(/\.\w+$/, '')
 
-      app.component(componentName, definition.default)
+    app.component(componentName, definition.default)
   })
 }
 
