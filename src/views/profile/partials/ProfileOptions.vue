@@ -2,7 +2,7 @@
 import type {
   ReposOption,
   ReposOptions,
-  ReposSortOption,
+  ReposSort,
   Repository,
 } from '@/types/profile'
 import { computed, ref } from 'vue'
@@ -31,6 +31,7 @@ const onOptionsChange = ({ option, value }: ReposOption) => {
 const forksCount = computed<number>(
   () => props.repos.filter((repo) => repo.fork).length,
 )
+
 const archivedCount = computed<number>(
   () => props.repos.filter((repo) => repo.archived).length,
 )
@@ -46,7 +47,7 @@ const archivedCount = computed<number>(
         label="Ordenar por"
         size="sm"
         @change="
-          (value: ReposSortOption) => onOptionsChange({ option: 'sort', value })
+          (value: ReposSort) => onOptionsChange({ option: 'sort', value })
         "
       />
     </div>

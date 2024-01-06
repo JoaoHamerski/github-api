@@ -1,22 +1,20 @@
 import type { EmptyObject } from '@/types/utils-types'
 import type { RequestParams } from '@/types/utils'
 
-export type User =
-  | EmptyObject
-  | {
-      id: string
-      repos_url: string
-      avatar_url: string
-      html_url: string
-      name: string
-      login: string
-      public_repos: number
-      followers: number
-      created_at: string
-      updated_at: string
-    }
+export interface User extends EmptyObject {
+  id: string
+  repos_url: string
+  avatar_url: string
+  html_url: string
+  name: string
+  login: string
+  public_repos: number
+  followers: number
+  created_at: string
+  updated_at: string
+}
 
-export type Repository = {
+export interface Repository {
   id: number
   name: string
   description: string
@@ -33,27 +31,24 @@ export type Repository = {
   clone_url: string
 }
 
-export type ReposSortOption = 'pushed' | 'created' | 'updated' | 'full_name'
-export type ReposSort = {
+export type ReposSort = 'pushed' | 'created' | 'updated' | 'full_name'
+
+export type ReposSortOption = {
   option: 'sort'
-  value: ReposSortOption
+  value: ReposSort
 }
 
-export type ReposFilter = {
+export type ReposFilterOption = {
   option: 'hideForks' | 'hideArchived'
   value: boolean
 }
 
-export type ReposOption = ReposSort | ReposFilter
+export type ReposOption = ReposSortOption | ReposFilterOption
 
 export type ReposOptions = {
-  sort: ReposSortOption
+  sort: ReposSort
   hideForks: boolean
   hideArchived: boolean
 }
 
-export type RepoParams = {
-  sort?: ReposSortOption
-  hideForks?: boolean
-  hideArchived?: boolean
-} & RequestParams
+export type RepoParams = Partial<ReposOptions> & RequestParams

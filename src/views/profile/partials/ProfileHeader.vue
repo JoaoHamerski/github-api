@@ -30,6 +30,7 @@ defineProps<ProfileHeaderProps>()
       <div class="mb-4">
         <h3 class="text-3xl font-bold mb-0">
           <a
+            class="text-primary"
             :href="user.html_url"
             target="_blank"
           >
