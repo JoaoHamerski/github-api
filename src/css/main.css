@@ -5,7 +5,7 @@
 html,
 body,
 #app {
-    @apply h-full bg-base-100;
+    @apply h-full bg-gradient-to-tr dark:from-blue-900 dark:to-orange-900;
 }
 
 html {

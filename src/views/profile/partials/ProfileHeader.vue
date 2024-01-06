@@ -28,9 +28,7 @@ defineProps<ProfileHeaderProps>()
     </div>
     <div class="flex flex-col justify-center">
       <div class="mb-4">
-        <h3
-          class="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary mb-0"
-        >
+        <h3 class="text-3xl font-bold mb-0">
           <a
             :href="user.html_url"
             target="_blank"
