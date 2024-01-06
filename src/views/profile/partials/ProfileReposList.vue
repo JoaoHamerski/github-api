@@ -14,26 +14,14 @@ const hasRepos = computed(() => props.repos.length)
 
 <template>
   <ul v-auto-animate>
-    <li
-      v-if="!hasRepos"
-      class="text-center py-10"
-    >
+    <li v-if="!hasRepos" class="text-center py-10">
       <div class="mb-5">
-        <FWIcon
-          size="2xl"
-          icon="fa-regular fa-folder-open"
-        />
+        <FWIcon size="2xl" icon="fa-regular fa-folder-open" />
       </div>
       <div>Nenhum repositório público</div>
     </li>
-    <template
-      v-for="repo in repos"
-      v-else
-      :key="repo.id"
-    >
-      <ProfileReposListItem 
-        :repo="repo"
-      />
+    <template v-for="repo in repos" v-else :key="repo.id">
+      <ProfileReposListItem :repo="repo" />
       <div class="divider last:hidden" />
     </template>
   </ul>

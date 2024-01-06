@@ -6,15 +6,15 @@ const emit = defineEmits(['update:modelValue'])
 defineProps({
   modelValue: {
     type: String,
-    default: ''
-  }
+    default: '',
+  },
 })
 
 const input = ref<HTMLInputElement>()
 
 const onInput = (event: Event) => {
   const value = (event.target as HTMLInputElement).value
-  
+
   emit('update:modelValue', value)
 }
 
@@ -34,5 +34,5 @@ defineExpose({ focus })
     class="input input-bordered w-full input-lg"
     name="username"
     @input="onInput"
-  >
+  />
 </template>

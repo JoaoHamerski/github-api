@@ -1,5 +1,5 @@
-import { useToastStore } from "@/store/toast-store"
-import type { UrlParams } from "@/types/utils"
+import { useToastStore } from '@/store/toast-store'
+import type { UrlParams } from '@/types/utils'
 
 export const updateUrlParams = (params: UrlParams) => {
   const newUrl = new URL(window.location.href)
@@ -9,20 +9,22 @@ export const updateUrlParams = (params: UrlParams) => {
       newUrl.searchParams.delete(key)
       continue
     }
-    
+
     newUrl.searchParams.set(key, params[key] as string)
   }
 
   window.history.pushState({}, '', newUrl.href)
 }
 
-export const getUrlParams = (searchParams: string | string[]): string | null | UrlParams => {
+export const getUrlParams = (
+  searchParams: string | string[],
+): string | null | UrlParams => {
   const currentUrl = new URL(window.location.href)
   const params: UrlParams = {}
 
   if (Array.isArray(searchParams)) {
     for (const param of searchParams) {
-      params[param] = currentUrl.searchParams.get(param) 
+      params[param] = currentUrl.searchParams.get(param)
     }
 
     return params

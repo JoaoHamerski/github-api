@@ -4,17 +4,14 @@ import ProfileReposList from './ProfileReposList.vue'
 import ProfileContainer from './ProfileContainer.vue'
 
 interface ProfileReposProps {
-  repos: Repository[],
+  repos: Repository[]
 }
 
 defineProps<ProfileReposProps>()
-
 </script>
 
 <template>
   <ProfileContainer>
-    <ProfileReposList
-      :repos="repos"
-    />
+    <ProfileReposList :repos="repos" />
   </ProfileContainer>
 </template>

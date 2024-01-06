@@ -12,14 +12,8 @@ const loading: Ref<boolean> | undefined = inject('isSearchLoading')
       :disabled="loading"
       @click="$attrs.click"
     >
-      <span
-        v-if="loading"
-        class="loading loading-spinner"
-      />
-      <FWIcon
-        v-else
-        icon="fa-solid fa-search"
-      />
+      <span v-if="loading" class="loading loading-spinner" />
+      <FWIcon v-else icon="fa-solid fa-search" />
       BUSCAR
     </button>
   </div>

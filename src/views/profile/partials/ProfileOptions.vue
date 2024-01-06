@@ -1,5 +1,10 @@
 <script setup lang="ts">
-import type { ReposOption, ReposOptions, ReposSortOption, Repository } from '@/types/profile'
+import type {
+  ReposOption,
+  ReposOptions,
+  ReposSortOption,
+  Repository,
+} from '@/types/profile'
 import { computed, ref } from 'vue'
 
 import type { AppSelectOption } from '@/components/AppSelect.vue'
@@ -23,8 +28,12 @@ const onOptionsChange = ({ option, value }: ReposOption) => {
   emit('update:options', { option, value })
 }
 
-const forksCount = computed<number>(() => props.repos.filter(repo => repo.fork).length)
-const archivedCount = computed<number>(() => props.repos.filter(repo => repo.archived).length)
+const forksCount = computed<number>(
+  () => props.repos.filter((repo) => repo.fork).length,
+)
+const archivedCount = computed<number>(
+  () => props.repos.filter((repo) => repo.archived).length,
+)
 </script>
 
 <template>
@@ -36,7 +45,9 @@ const archivedCount = computed<number>(() => props.repos.filter(repo => repo.arc
         label-icon="fas fa-sort"
         label="Ordenar por"
         size="sm"
-        @change="(value: ReposSortOption) => onOptionsChange({option: 'sort', value})"
+        @change="
+          (value: ReposSortOption) => onOptionsChange({ option: 'sort', value })
+        "
       />
     </div>
     <div class="grow flex flex-col">
@@ -46,15 +57,21 @@ const archivedCount = computed<number>(() => props.repos.filter(repo => repo.arc
         :label="'Ocultar forks' + (forksCount ? ` (${forksCount})` : '')"
         :disabled="!forksCount"
         disabled-message="Este usuário não possui forks públicos"
-        @toggle="(value: boolean) => onOptionsChange({option: 'hideForks', value})"
+        @toggle="
+          (value: boolean) => onOptionsChange({ option: 'hideForks', value })
+        "
       />
-        
+
       <AppToggle
         :model-value="options.hideArchived"
-        :label="'Ocultar arquivados' + (archivedCount ? ` (${archivedCount})` : '')"
+        :label="
+          'Ocultar arquivados' + (archivedCount ? ` (${archivedCount})` : '')
+        "
         :disabled="!archivedCount"
         disabled-message="Este usuário não possui repositórios arquivados públicos"
-        @toggle="(value: boolean) => onOptionsChange({option: 'hideArchived', value})"
+        @toggle="
+          (value: boolean) => onOptionsChange({ option: 'hideArchived', value })
+        "
       />
     </div>
   </div>

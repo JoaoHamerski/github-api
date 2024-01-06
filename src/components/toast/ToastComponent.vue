@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import {  useToastStore } from '@/store/toast-store'
+import { useToastStore } from '@/store/toast-store'
 import { computed } from 'vue'
 
 import ToastAlert from './ToastAlert.vue'
