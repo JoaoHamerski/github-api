@@ -25,6 +25,7 @@
     "lodash-es": "^4.17.21",
     "luxon": "^3.4.4",
     "pinia": "^2.1.7",
+    "tailwind-scrollbar": "^3.0.5",
     "vue": "^3.3.11"
   },
   "devDependencies": {

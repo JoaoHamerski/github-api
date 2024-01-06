@@ -30,7 +30,7 @@ const reposCache = ref<Repository[]>([])
 const isLoading = ref<boolean>(false)
 
 const reposOptions = ref<ReposOptions>({
-  sort: 'full_name',
+  sort: 'pushed',
   hideArchived: false,
   hideForks: false,
 })
@@ -89,7 +89,7 @@ const fetchData = async (params: RepoParams = {}) => {
 }
 
 onMounted(async () => {
-  await fetchData()
+  await fetchData({ sort: reposOptions.value.sort })
 })
 </script>
 
@@ -123,6 +123,7 @@ onMounted(async () => {
         key="loading"
         class="py-14"
       />
+
       <ProfileRepos
         v-else
         key="profile-repos"
