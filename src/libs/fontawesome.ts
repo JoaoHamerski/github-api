@@ -16,6 +16,9 @@ import { faCalendarDays } from '@fortawesome/free-solid-svg-icons/faCalendarDays
 import { faSort } from '@fortawesome/free-solid-svg-icons/faSort'
 import { faEllipsis } from '@fortawesome/free-solid-svg-icons/faEllipsis'
 import { faCopy } from '@fortawesome/free-regular-svg-icons/faCopy'
+import { faCircleExclamation } from '@fortawesome/free-solid-svg-icons/faCircleExclamation'
+import { faCircleXmark } from '@fortawesome/free-solid-svg-icons/faCircleXmark'
+import { faCircleCheck } from '@fortawesome/free-solid-svg-icons/faCircleCheck'
 
 library.add(
   faGithubAlt,
@@ -32,10 +35,13 @@ library.add(
   faSort,
   faEllipsis,
   faCopy,
+  faCircleExclamation,
+  faCircleXmark,
+  faCircleCheck,
 )
 
-const registerFontAwesomePlugin = (app: App<Element>) => {
+const registerFontAwesomeComponent = (app: App<Element>) => {
   app.component('FWIcon', FontAwesomeIcon)
 }
 
-export default registerFontAwesomePlugin
+export default registerFontAwesomeComponent

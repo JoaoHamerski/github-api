@@ -16,7 +16,7 @@ defineProps<ProfileHeaderProps>()
   <div class="flex gap-10">
     <div class="avatar">
       <div
-        class="relative w-32 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2"
+        class="relative w-32 rounded-full ring ring-blue-500 hover:ring-blue-600 transition-shadow ring-offset-base-100 ring-offset-2"
       >
         <a
           :href="user.html_url"
@@ -30,7 +30,7 @@ defineProps<ProfileHeaderProps>()
       <div class="mb-4">
         <h3 class="text-3xl font-bold mb-0">
           <a
-            class="text-primary"
+            class="text-blue-500 hover:text-blue-600 transition-colors"
             :href="user.html_url"
             target="_blank"
           >

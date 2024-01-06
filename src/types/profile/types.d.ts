@@ -1,18 +1,20 @@
 import type { EmptyObject } from '@/types/utils-types'
 import type { RequestParams } from '@/types/utils'
 
-export interface User extends EmptyObject {
-  id: string
-  repos_url: string
-  avatar_url: string
-  html_url: string
-  name: string
-  login: string
-  public_repos: number
-  followers: number
-  created_at: string
-  updated_at: string
-}
+export type User =
+  | EmptyObject
+  | {
+      id: string
+      repos_url: string
+      avatar_url: string
+      html_url: string
+      name: string
+      login: string
+      public_repos: number
+      followers: number
+      created_at: string
+      updated_at: string
+    }
 
 export interface Repository {
   id: number

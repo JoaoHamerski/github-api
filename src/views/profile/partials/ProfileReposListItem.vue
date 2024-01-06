@@ -16,12 +16,20 @@ const dropdownItems = computed<DropdownItem[]>(() => [
   {
     label: 'Copiar SSH',
     icon: 'far fa-copy',
-    onClick: () => copyToClipboard(props.repo.ssh_url, 'SSH copiado'),
+    onClick: () =>
+      copyToClipboard(
+        props.repo.ssh_url,
+        'Repositório copiado para área de transferência',
+      ),
   },
   {
     label: 'Copiar HTTP URL',
     icon: 'far fa-copy',
-    onClick: () => copyToClipboard(props.repo.clone_url, 'URL copiado'),
+    onClick: () =>
+      copyToClipboard(
+        props.repo.clone_url,
+        'Repositório copiado para área de transferência',
+      ),
   },
 ])
 </script>

@@ -16,5 +16,10 @@ module.exports = {
   parserOptions: {
     ecmaVersion: 'latest',
   },
-  rules: {},
+  rules: {
+    'vue/html-self-closing': [
+      'error',
+      { html: { component: 'always', void: 'always' } },
+    ],
+  },
 }

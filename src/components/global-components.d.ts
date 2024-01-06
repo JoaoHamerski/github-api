@@ -4,6 +4,7 @@ import type AppDropdown from './AppDropdown.vue'
 import type AppLoading from './AppLoading.vue'
 import type AppSelect from './AppSelect.vue'
 import type AppToggle from './AppToggle.vue'
+import type AppTransition from './AppTransition.vue'
 
 /**
  * Cada componente global precisa ser declarado para
@@ -15,9 +16,10 @@ declare module '@vue/runtime-core' {
     AppBadge: typeof AppBadge
     AppContainer: typeof AppContainer
     AppDropdown: typeof AppDropdown
-    AppLoadnig: typeof AppLoading
+    AppLoading: typeof AppLoading
     AppSelect: typeof AppSelect
     AppToggle: typeof AppToggle
+    AppTransition: typeof AppTransition
   }
 }
 

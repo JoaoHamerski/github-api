@@ -1,14 +1,9 @@
 import { defineStore } from 'pinia'
 import { uniqueId } from 'lodash-es'
-
-export type ToastTypes = 'success' | 'info' | 'error'
-type Toast = { id: string; type: ToastTypes; message: string }
-
-interface ToastOptions {
-  timeout?: number
-}
+import type { Toast, ToastTypes, ToastOptions } from '@/types/store'
 
 const DEFAULT_TIMEOUT = 4000
+const MAX_TOASTS_PER_TIME = 5
 
 export const useToastStore = defineStore('toast', {
   state: () => ({
@@ -22,9 +17,14 @@ export const useToastStore = defineStore('toast', {
         message,
       })
 
-      setTimeout(() => {
+      const timeoutId = setTimeout(() => {
         this.toasts.shift()
       }, options.timeout || DEFAULT_TIMEOUT)
+
+      if (this.toasts.length > MAX_TOASTS_PER_TIME) {
+        this.toasts.pop()
+        clearTimeout(timeoutId)
+      }
     },
     success(message: string, options: ToastOptions = {}) {
       this.show('success', message, options)
