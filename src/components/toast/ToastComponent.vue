@@ -10,12 +10,33 @@ const toasts = computed(() => toastStore.toasts)
 </script>
 
 <template>
-  <div class="toast toast-top toast-end">
+  <TransitionGroup
+    tag="div"
+    class="absolute top-3 right-3 z-50"
+    name="toast"
+  >
     <ToastAlert
       v-for="toast in toasts"
       :key="toast.id"
       :type="toast.type"
       :message="toast.message"
     />
-  </div>
+  </TransitionGroup>
 </template>
+
+<style>
+.toast-move,
+.toast-enter-active,
+.toast-leave-active {
+  @apply transition-all;
+}
+
+.toast-enter-from,
+.toast-leave-to {
+  @apply opacity-0 translate-x-10;
+}
+
+.toast-leave-active {
+  @apply absolute w-fit;
+}
+</style>

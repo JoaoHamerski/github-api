@@ -53,16 +53,16 @@ onMounted(() => {
     onSearch(username as string)
   }
 })
+
 provide('isSearchLoading', isLoading)
 </script>
 
 <template>
   <ToastComponent />
   <AppContainer class="p-10 mx-auto mt-10 w-3/4 overflow-auto h-[90vh]">
-    <Transition
-      enter-active-class="animate__animated animate__fadeIn animate__faster"
-      leave-active-class="animate__animated animate__fadeOut animate__faster"
-      mode="out-in"
+    <AppTransition
+      enter-class="fadeIn"
+      leave-class="fadeOut"
     >
       <TheHome
         v-if="!hasUser"
@@ -75,6 +75,6 @@ provide('isSearchLoading', isLoading)
         :user="user"
         @back="onBackClick"
       />
-    </Transition>
+    </AppTransition>
   </AppContainer>
 </template>
