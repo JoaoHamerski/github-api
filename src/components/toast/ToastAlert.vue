@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import type { ToastTypes } from '@/store/toast-store'
+import type { ToastType } from '@/types/store'
 import { computed } from 'vue'
 
-const TOAST_TYPES_MAP: Record<ToastTypes, { className: string; icon: string }> =
+const TOAST_TYPES_MAP: Record<ToastType, { className: string; icon: string }> =
   {
     success: {
       icon: 'fas fa-check-circle',
@@ -19,7 +19,7 @@ const TOAST_TYPES_MAP: Record<ToastTypes, { className: string; icon: string }> =
   }
 
 type ToastAlertTypes = {
-  type: ToastTypes
+  type: ToastType
   message: String
 }
 
@@ -35,7 +35,7 @@ const toastProps = computed(() => TOAST_TYPES_MAP[props.type])
     <FWIcon
       :icon="toastProps.icon"
       size="xl"
-    ></FWIcon>
+    />
     <span class="text-sm">{{ message }}</span>
   </div>
 </template>

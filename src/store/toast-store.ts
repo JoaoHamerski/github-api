@@ -1,6 +1,6 @@
 import { defineStore } from 'pinia'
 import { uniqueId } from 'lodash-es'
-import type { Toast, ToastTypes, ToastOptions } from '@/types/store'
+import type { Toast, ToastType, ToastOptions } from '@/types/store'
 
 const DEFAULT_TIMEOUT = 4000
 const MAX_TOASTS_PER_TIME = 5
@@ -10,7 +10,7 @@ export const useToastStore = defineStore('toast', {
     toasts: [] as Toast[],
   }),
   actions: {
-    show(type: ToastTypes, message: string, options: ToastOptions = {}) {
+    show(type: ToastType, message: string, options: ToastOptions = {}) {
       this.toasts.unshift({
         id: uniqueId(),
         type,

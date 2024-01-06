@@ -1,8 +1,8 @@
-export type ToastTypes = 'success' | 'info' | 'error'
+export type ToastType = 'success' | 'info' | 'error'
 
 export type Toast = {
   id: string
-  type: ToastTypes
+  type: ToastType
   message: string
 }
 
