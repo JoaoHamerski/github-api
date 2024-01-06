@@ -32,7 +32,11 @@ const onToggle = (event: Event) => {
           :disabled="disabled"
           @change="onToggle"
         />
-        <span v-if="label" class="label-text">{{ label }}</span>
+        <span
+          v-if="label"
+          class="label-text"
+          >{{ label }}</span
+        >
       </label>
     </div>
   </div>

@@ -42,9 +42,16 @@ const onSelectChange = (event: Event) => {
 
 <template>
   <label class="form-control w-full">
-    <div v-if="label" class="label">
+    <div
+      v-if="label"
+      class="label"
+    >
       <span class="label-text font-bold">
-        <FWIcon v-if="labelIcon" fixed-width :icon="labelIcon" />
+        <FWIcon
+          v-if="labelIcon"
+          fixed-width
+          :icon="labelIcon"
+        />
         {{ label }}
       </span>
     </div>
@@ -54,7 +61,10 @@ const onSelectChange = (event: Event) => {
       :class="[sizeClass]"
       @change="onSelectChange"
     >
-      <template v-for="option in options" :key="option.value">
+      <template
+        v-for="option in options"
+        :key="option.value"
+      >
         <option
           :disabled="option.disabled"
           :selected="valueModel === option.value"
@@ -66,7 +76,11 @@ const onSelectChange = (event: Event) => {
     </select>
 
     <div class="label">
-      <span v-if="hint" class="label-text-alt">{{ hint }}</span>
+      <span
+        v-if="hint"
+        class="label-text-alt"
+        >{{ hint }}</span
+      >
     </div>
   </label>
 </template>

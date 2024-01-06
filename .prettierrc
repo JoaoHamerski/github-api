@@ -3,5 +3,7 @@
     "singleQuote": true,
     "semi": false,
     "useTabs": false,
-    "quoteProps": "consistent"
+    "quoteProps": "consistent",
+    "singleAttributePerLine": true,
+    "tabWidth": 2
 }

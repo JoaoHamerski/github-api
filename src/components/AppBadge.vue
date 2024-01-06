@@ -9,7 +9,10 @@ defineProps<AppBadgeProps>()
 
 <template>
   <span class="badge text-xs">
-    <span v-if="icon" class="mr-1">
+    <span
+      v-if="icon"
+      class="mr-1"
+    >
       <FWIcon :icon="icon" />
     </span>
     <span>{{ label }}</span>

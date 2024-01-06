@@ -30,7 +30,11 @@ const dropdownItems = computed<DropdownItem[]>(() => [
   <li>
     <div class="flex justify-between mb-3">
       <div>
-        <a :href="repo.html_url" class="mr-3" target="_blank">
+        <a
+          :href="repo.html_url"
+          class="mr-3"
+          target="_blank"
+        >
           <FWIcon
             class="text-blue-600 hover:text-blue-500 cursor-pointer transition-colors"
             icon="fa-solid fa-up-right-from-square"
@@ -47,7 +51,10 @@ const dropdownItems = computed<DropdownItem[]>(() => [
         </span>
       </div>
       <div>
-        <AppDropdown icon="fa-ellipsis" :items="dropdownItems" />
+        <AppDropdown
+          icon="fa-ellipsis"
+          :items="dropdownItems"
+        />
       </div>
     </div>
 
