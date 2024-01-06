@@ -5,9 +5,9 @@
 html,
 body,
 #app {
-    @apply h-full bg-gradient-to-tr dark:from-blue-900 dark:to-orange-900;
+  @apply h-full bg-gradient-to-tr dark:from-blue-900 dark:to-orange-900;
 }
 
 html {
-    @apply overflow-hidden
+  @apply overflow-hidden;
 }
