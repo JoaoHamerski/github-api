@@ -1,0 +1,13 @@
+@import './tailwind.css';
+@import './animate.min.css';
+
+:root,
+html,
+body,
+#app {
+    @apply h-full bg-base-100;
+}
+
+html {
+    @apply overflow-hidden
+}
