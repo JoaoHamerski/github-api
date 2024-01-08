@@ -21,9 +21,9 @@ defineProps<ProfileHeaderProps>()
         <a
           :href="user.html_url"
           target="_blank"
-          class="absolute inset-0"
+          class="absolute inset-0 z-10"
         />
-        <img :src="user.avatar_url" />
+        <AppImage :src="user.avatar_url" />
       </div>
     </div>
     <div class="flex flex-col justify-center">
