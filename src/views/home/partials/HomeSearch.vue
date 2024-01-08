@@ -18,7 +18,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="mt-16 w-1/2 mx-auto text-center">
+  <div class="mt-16 md:w-1/2 mx-auto text-center">
     <form @submit.prevent="onSearchClick">
       <HomeSearchInput
         ref="homeSearchInput"

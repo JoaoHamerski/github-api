@@ -31,7 +31,7 @@ defineExpose({ focus })
     :value="modelValue"
     type="text"
     placeholder="Nome de usuário..."
-    class="input input-bordered w-full input-lg"
+    class="input input-bordered w-full md:input-lg"
     name="username"
     @input="onInput"
   />

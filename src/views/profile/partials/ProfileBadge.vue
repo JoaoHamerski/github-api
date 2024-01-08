@@ -9,7 +9,7 @@ defineProps<ProfileBadgeProps>()
 </script>
 
 <template>
-  <div>
+  <div class="text-nowrap">
     <FWIcon
       v-if="icon"
       :icon="icon"

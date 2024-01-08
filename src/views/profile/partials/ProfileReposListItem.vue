@@ -36,7 +36,7 @@ const dropdownItems = computed<DropdownItem[]>(() => [
 
 <template>
   <li>
-    <div class="flex justify-between mb-3">
+    <div class="flex justify-between items-baseline mb-3">
       <div>
         <a
           :href="repo.html_url"
@@ -70,16 +70,16 @@ const dropdownItems = computed<DropdownItem[]>(() => [
       {{ repo.description }}
     </div>
 
-    <div class="flex justify-between">
-      <div class="text-sm">
-        <span>
-          <b>Último commit: </b>
-          <span>{{ formatDateTime(repo.pushed_at).toRelative() }}</span>
-        </span>
-        <span class="mx-2">&bull;</span>
+    <div class="flex flex-col md:flex-row justify-between">
+      <div class="flex flex-col md:flex-row text-xs mb-5 md:mb-0">
         <span>
           <b>Criado </b>
           <span>{{ formatDateTime(repo.created_at).toRelative() }}</span>
+        </span>
+        <span class="mx-2 hidden md:block">&bull;</span>
+        <span>
+          <b>Último commit: </b>
+          <span>{{ formatDateTime(repo.pushed_at).toRelative() }}</span>
         </span>
       </div>
 

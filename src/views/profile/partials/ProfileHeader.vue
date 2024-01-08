@@ -13,8 +13,8 @@ defineProps<ProfileHeaderProps>()
 </script>
 
 <template>
-  <div class="flex gap-10">
-    <div class="avatar">
+  <div class="flex flex-col md:flex-row gap-10">
+    <div class="avatar mx-auto md:mx-0">
       <div
         class="relative w-32 rounded-full ring ring-blue-500 hover:ring-blue-600 transition-shadow ring-offset-base-100 ring-offset-2"
       >
@@ -27,8 +27,8 @@ defineProps<ProfileHeaderProps>()
       </div>
     </div>
     <div class="flex flex-col justify-center">
-      <div class="mb-4">
-        <h3 class="text-3xl font-bold mb-0">
+      <div class="mb-4 text-center md:text-left">
+        <h3 class="text-xl md:text-3xl font-bold mb-0">
           <a
             class="text-blue-500 hover:text-blue-600 transition-colors"
             :href="user.html_url"
@@ -45,7 +45,7 @@ defineProps<ProfileHeaderProps>()
           ({{ user.login }})
         </div>
       </div>
-      <div class="flex gap-8 text-sm">
+      <div class="flex overflow-auto gap-8 text-xs md:text-sm">
         <ProfileBadge
           icon="fa-solid fa-users"
           label="Seguidores:"
