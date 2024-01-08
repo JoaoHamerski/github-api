@@ -27,14 +27,14 @@ const onToggle = (event: Event) => {
       <label class="flex gap-2 items-center">
         <input
           type="checkbox"
-          class="toggle toggle-primary"
+          class="toggle toggle-sm md:toggle-md toggle-primary"
           :checked="modelValue"
           :disabled="disabled"
           @change="onToggle"
         />
         <span
           v-if="label"
-          class="label-text"
+          class="label-text text-xs md:text-md"
           >{{ label }}</span
         >
       </label>
