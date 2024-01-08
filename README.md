@@ -1,5 +1,7 @@
 # github-api
 
+GitHub Pages: https://joaohamerski.github.io/github-api/
+
 ## Tecnologias utilizadas
 - Vue 3 (script setup).
 - Vite
