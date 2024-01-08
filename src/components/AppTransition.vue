@@ -7,7 +7,7 @@
 interface AppTransitionProps {
   enterClass: 'fadeIn'
   leaveClass: 'fadeOut'
-  mode: 'out-in' | 'in-out'
+  mode?: 'out-in' | 'in-out'
 }
 
 withDefaults(defineProps<AppTransitionProps>(), {

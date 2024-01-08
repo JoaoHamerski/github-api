@@ -1,6 +1,7 @@
 import type AppBadge from './AppBadge.vue'
 import type AppContainer from './AppContainer.vue'
 import type AppDropdown from './AppDropdown.vue'
+import type AppImage from './AppImage.vue'
 import type AppLoading from './AppLoading.vue'
 import type AppSelect from './AppSelect.vue'
 import type AppToggle from './AppToggle.vue'
@@ -20,6 +21,7 @@ declare module '@vue/runtime-core' {
     AppSelect: typeof AppSelect
     AppToggle: typeof AppToggle
     AppTransition: typeof AppTransition
+    AppImage: typeof AppImage
   }
 }
 
