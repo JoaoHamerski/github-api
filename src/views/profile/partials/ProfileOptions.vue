@@ -38,7 +38,7 @@ const archivedCount = computed<number>(
 </script>
 
 <template>
-  <div class="flex gap-5">
+  <div class="flex flex-col md:flex-row gap-5">
     <div class="grow">
       <AppSelect
         :value-model="options.sort"
