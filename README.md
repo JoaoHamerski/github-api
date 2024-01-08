@@ -1,6 +1,24 @@
 # github-api
 
-This template should help get you started developing with Vue 3 in Vite.
+## Tecnologias utilizadas
+- Vue 3 (script setup).
+- Vite
+- Pinia store para implementar notificações Toast.
+- TailwindCSS.
+- DaisyUI como biblioteca de componentes para TailwindCSS.
+- Eslint apenas para aplicar regras de qualidade de código.
+- Prettier apenas para regras de formatação do código.
+
+## Convenções adotadas
+- Nomes de arquivos: Todos arquivos foram nomeados utilizando kebab-case, com exceção de componentes.
+- Views: Os arquivos de entry-point das views começam sempre com "The" para indicar que é uma view não reutilizável.
+- Componentes: O nome de componentes seguem a lógica de acordo com suas dependencias de componentes pais. Ex.: "Main" > "MainList" > "MainListItem" > "MainListItemSubitem".
+- Componentes globais: Os componentes globais iniciam sempre com "App".
+- Componentes reutilizáveis: Qualquer componente que é feito com a intenção de ser reutilizável é colocado no diretório "components".
+- Tipos: Os tipos são definidos fora dos arquivos de implementação, no diretório "types", para deixar a lógica de implementação mais limpa e clara.
+
+## To do
+- Paginação por causa dos clinicamente insânos que tem mais de 100 repositórios na conta.
 
 ## Recommended IDE Setup
 
