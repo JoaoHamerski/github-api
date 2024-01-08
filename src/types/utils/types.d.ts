@@ -1,11 +1,7 @@
-export type RequestParams = {
-  [any: string]: string | number
-}
+export type RequestParams = Record<string, string>
 
 export type RequestOptions = RequestInit & {
   params?: RequestParams
 }
 
-export type UrlParams = {
-  [prop: string]: string | null
-}
+export type UrlParams = Record<string, string | null>
