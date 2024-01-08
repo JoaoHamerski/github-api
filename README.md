@@ -3,6 +3,7 @@
 ## Tecnologias utilizadas
 - Vue 3 (script setup).
 - Vite
+- TypeScript
 - Pinia store para implementar notificações Toast.
 - TailwindCSS.
 - DaisyUI como biblioteca de componentes para TailwindCSS.
