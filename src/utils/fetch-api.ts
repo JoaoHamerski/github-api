@@ -1,7 +1,4 @@
-import type {
-  RequestParams,
-  RequestOptions,
-} from '@/types/utils/fetch-api-types'
+import type { RequestParams, RequestOptions } from '@/types/utils'
 
 const API_URL = 'https://api.github.com'
 

@@ -66,7 +66,7 @@ const onOptionsUpdate = async ({ option, value }: ReposOption) => {
 const fetchData = async (params: RepoParams = {}) => {
   const DEFAULT_PARAMS: RepoParams = {
     sort: 'full_name',
-    per_page: 100,
+    per_page: '100',
   }
 
   isLoading.value = true
