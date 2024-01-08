@@ -60,7 +60,7 @@ provide('isSearchLoading', isLoading)
 <template>
   <ToastComponent />
   <AppContainer
-    class="p-6 md:p-10 mx-auto mt-10 w-11/12 md:w-3/4 overflow-auto h-[90vh]"
+    class="p-6 md:p-10 mx-auto mt-10 w-11/12 md:w-3/4 overflow-auto h-[90%]"
   >
     <AppTransition
       enter-class="fadeIn"
