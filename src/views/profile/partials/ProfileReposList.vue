@@ -15,7 +15,7 @@ const hasRepos = computed(() => props.repos.length)
 <template>
   <ul
     v-auto-animate="{ duration: 150 }"
-    class="overflow-y-hidden"
+    class="overflow-hidden"
   >
     <li
       v-if="!hasRepos"

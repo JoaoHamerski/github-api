@@ -10,7 +10,7 @@ const onSearch = (search: string) => {
 </script>
 
 <template>
-  <div class="mx-auto mt-10">
+  <div class="mx-auto -mt-10 flex flex-col items-center justify-center h-full">
     <HomeHeader />
     <HomeSearch @search="onSearch" />
   </div>
