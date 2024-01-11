@@ -66,7 +66,7 @@ const dropdownItems = computed<DropdownItem[]>(() => [
       </div>
     </div>
 
-    <div class="text-sm mb-2">
+    <div class="text-sm mb-2 break-words">
       {{ repo.description }}
     </div>
 
