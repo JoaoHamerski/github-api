@@ -9,8 +9,7 @@ GitHub Pages: https://joaohamerski.github.io/github-api/
 - Pinia store para implementar notificações Toast.
 - TailwindCSS.
 - DaisyUI como biblioteca de componentes para TailwindCSS.
-- Eslint apenas para aplicar regras de qualidade de código.
-- Prettier apenas para regras de formatação do código.
+- Eslint e Prettier.
 
 ## Convenções adotadas
 - Nomes de arquivos: Todos arquivos foram nomeados utilizando kebab-case, com exceção de componentes.
@@ -20,17 +19,14 @@ GitHub Pages: https://joaohamerski.github.io/github-api/
 - Componentes reutilizáveis: Qualquer componente que é feito com a intenção de ser reutilizável é colocado no diretório "components".
 - Tipos: Os tipos são definidos fora dos arquivos de implementação, no diretório "types", para deixar a lógica de implementação mais limpa e clara.
 
-## To do
-- Paginação por causa dos clinicamente insânos que tem mais de 100 repositórios na conta.
+## Decisões de design
+- Scrollbar é estilizada somente em telas pequenas (de celular), pois navegadores de celular já gerenciam o seu estilo de forma elegante.
 
 ## Imagens demo
 ### Tema escuro
 ![Página inicial com tema escuro](https://github.com/JoaoHamerski/github-api/assets/32890601/6b81b79d-f548-4a5b-9c87-c183b9844f4b)
 ### Tema claro
 ![Página inicial com tema claro](https://github.com/JoaoHamerski/github-api/assets/32890601/2d1e7f12-b302-4b00-b3b5-ba0ab5fab83b)
-
-
-
 
 ## Recommended IDE Setup
 
