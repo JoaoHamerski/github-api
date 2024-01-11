@@ -17,6 +17,18 @@ module.exports = {
     ecmaVersion: 'latest',
   },
   rules: {
+    'prettier/prettier': [
+      'error',
+      {
+        printWidth: 80,
+        singleQuote: true,
+        semi: false,
+        useTabs: false,
+        quoteProps: 'consistent',
+        singleAttributePerLine: true,
+        tabWidth: 2,
+      },
+    ],
     'vue/html-self-closing': [
       'error',
       { html: { component: 'always', void: 'always' } },
