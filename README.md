@@ -22,7 +22,7 @@ GitHub Pages: https://joaohamerski.github.io/github-api/
 ## Decisões de design
 - Scrollbar é estilizada somente em telas pequenas (de celular), pois navegadores de celular já gerenciam o seu estilo de forma elegante.
 
-## Imagens demo
+## Preview
 ### Tema escuro
 ![Página inicial com tema escuro](https://github.com/JoaoHamerski/github-api/assets/32890601/6b81b79d-f548-4a5b-9c87-c183b9844f4b)
 ### Tema claro
