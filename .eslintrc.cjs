@@ -8,7 +8,6 @@ module.exports = {
   },
   extends: [
     'eslint:recommended',
-    'prettier',
     'plugin:vue/vue3-recommended',
     '@vue/eslint-config-typescript',
     '@vue/eslint-config-prettier',
@@ -17,18 +16,7 @@ module.exports = {
     ecmaVersion: 'latest',
   },
   rules: {
-    'prettier/prettier': [
-      'error',
-      {
-        printWidth: 80,
-        singleQuote: true,
-        semi: false,
-        useTabs: false,
-        quoteProps: 'consistent',
-        singleAttributePerLine: true,
-        tabWidth: 2,
-      },
-    ],
+    'vue/padding-line-between-blocks': ['error'],
     'vue/html-self-closing': [
       'error',
       { html: { component: 'always', void: 'always' } },
