@@ -1,9 +1,18 @@
 import { createApp } from 'vue'
-import { initResources } from './boot'
+import './css/main.css'
+import './libs/fontawesome'
+
 import App from './App.vue'
+import Bootstrap from './bootstrap'
 
 const app = createApp(App)
+const bootstrap = new Bootstrap(app)
 
-initResources(app)
+// prettier-ignore
+bootstrap
+    .addPinia()
+    .addGlobalComponents()
+    .addAutoAnimate()
+    .addFontAwesome()
 
 app.mount('#app')
