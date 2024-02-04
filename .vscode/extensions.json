@@ -4,7 +4,9 @@
     "Vue.vscode-typescript-vue-plugin",
     "dbaeumer.vscode-eslint",
     "heybourn.headwind",
-    "esbenp.prettier-vscode",
     "csstools.postcss",
+  ],
+  "unwantedRecommendations": [
+    "esbenp.prettier-vscode"
   ]
 }
