@@ -1,5 +1,3 @@
-import type { App } from 'vue'
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { library } from '@fortawesome/fontawesome-svg-core'
 
 import { faGithubAlt } from '@fortawesome/free-brands-svg-icons/faGithubAlt'
@@ -39,9 +37,3 @@ library.add(
   faCircleXmark,
   faCircleCheck,
 )
-
-const registerFontAwesomeComponent = (app: App<Element>) => {
-  app.component('FWIcon', FontAwesomeIcon)
-}
-
-export default registerFontAwesomeComponent
