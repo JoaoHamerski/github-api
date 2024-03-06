@@ -11,17 +11,6 @@ GitHub Pages: https://joaohamerski.github.io/github-api/
 - DaisyUI como biblioteca de componentes para TailwindCSS.
 - Eslint e Prettier.
 
-## Convenções adotadas
-- Nomes de arquivos: Todos arquivos foram nomeados utilizando kebab-case, com exceção de componentes.
-- Views: Os arquivos de entry-point das views começam sempre com "The" para indicar que é uma view não reutilizável.
-- Componentes: O nome de componentes seguem a lógica de acordo com suas dependencias de componentes pais. Ex.: "Main" > "MainList" > "MainListItem" > "MainListItemSubitem".
-- Componentes globais: Os componentes globais iniciam sempre com "App".
-- Componentes reutilizáveis: Qualquer componente que é feito com a intenção de ser reutilizável é colocado no diretório "components".
-- Tipos: Os tipos são definidos fora dos arquivos de implementação, no diretório "types", para deixar a lógica de implementação mais limpa e clara.
-
-## Decisões de design
-- Scrollbar é estilizada somente em telas pequenas (de celular), pois navegadores de celular já gerenciam o seu estilo de forma elegante.
-
 ## Preview
 ### Tema escuro
 ![Página inicial com tema escuro](https://github.com/JoaoHamerski/github-api/assets/32890601/6b81b79d-f548-4a5b-9c87-c183b9844f4b)
