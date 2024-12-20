@@ -10,7 +10,6 @@ const loading: Ref<boolean> | undefined = inject('isSearchLoading')
     <button
       class="btn btn-primary px-10 font-bold btn-block md:w-fit"
       :disabled="loading"
-      @click="$attrs.click"
     >
       <span
         v-if="loading"
