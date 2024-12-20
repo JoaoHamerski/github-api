@@ -18,8 +18,8 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="mt-16 md:w-1/2 mx-auto text-center">
-    <form @submit.prevent="onSearchClick">
+  <div class="mt-16 w-full px-2 md:px-0 md:w-1/2 mx-auto text-center">
+    <form @submit.prevent="onSearchClick" class="w-full">
       <HomeSearchInput
         ref="homeSearchInput"
         v-model="search"
