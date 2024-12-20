@@ -1,5 +1,6 @@
 @import './tailwind.css';
 @import './animate.min.css';
+@import './scrollbar.css';
 
 :root,
 html,
