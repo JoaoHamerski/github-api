@@ -29,7 +29,7 @@ const toastProps = computed(() => TOAST_TYPES_MAP[props.type])
 
 <template>
   <div
-    class="alert shadow-xl rounded-md md:rounded-lg mb-2 md:mb-3 whitespace-nowrap p-2 md:p-4 flex flex-nowrap"
+    class="alert shadow-xl rounded-md md:rounded-lg mb-2 md:mb-3  p-2 md:p-4 flex flex-nowrap min-w-[380px] max-w-[380px]"
     :class="toastProps.className"
   >
     <FWIcon
