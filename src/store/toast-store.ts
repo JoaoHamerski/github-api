@@ -18,7 +18,7 @@ export const useToastStore = defineStore('toast', {
       })
 
       const timeoutId = setTimeout(() => {
-        this.toasts.shift()
+        this.toasts.pop()
       }, options.timeout || DEFAULT_TIMEOUT)
 
       if (this.toasts.length > MAX_TOASTS_PER_TIME) {
