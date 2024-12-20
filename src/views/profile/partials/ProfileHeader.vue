@@ -45,7 +45,7 @@ defineProps<ProfileHeaderProps>()
           ({{ user.login }})
         </div>
       </div>
-      <div class="flex overflow-auto gap-8 text-xs md:text-sm py-4 md:py-4">
+      <div class="flex flex-wrap md:flex-nowrap justify-center md:justify-normal gap-8 text-xs md:text-sm py-4 md:py-4">
         <ProfileBadge
           icon="fa-solid fa-users"
           label="Seguidores:"
