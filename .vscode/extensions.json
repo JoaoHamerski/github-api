@@ -1,12 +1,9 @@
 {
   "recommendations": [
-    "vue.volar",
-    "Vue.vscode-typescript-vue-plugin",
     "dbaeumer.vscode-eslint",
-    "heybourn.headwind",
     "csstools.postcss",
-  ],
-  "unwantedRecommendations": [
-    "esbenp.prettier-vscode"
+    "vue.volar",
+    "esbenp.prettier-vscode",
+    "editorconfig.editorconfig",
   ]
 }
